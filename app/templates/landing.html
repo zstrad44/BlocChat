@@ -1,0 +1,70 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="sidebar-Wrapper">
+            <div class="col-sm-3 sidebar">
+                <div class="sidebar-Content">
+                    <div class="sidebar-header">
+                        <h1 class="roomDisplay">Rooms</h1>
+                    </div>
+                    <div class="sidebar-body"  >
+                        <ul class="list-group" ng-repeat="room in this.rooms">
+                            <li class="list-group-item" >
+                                <span class="tag tag-default tag-pill pull-xs-right">14</span>
+                                Room 1
+                            </li>
+                            <li class="list-group-item">
+                                <span class="tag tag-default tag-pill pull-xs-right">2</span>
+                                Room 2
+                            </li>
+                            <li class="list-group-item">
+                                <span class="tag tag-default tag-pill pull-xs-right">1</span>
+                                Room 3
+                            </li>
+                        </ul>
+                        <br>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">New room</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-9  mainArea">
+            <br>
+            <br>
+            <br>
+            <!--<p>Hello</p>-->
+        </div>
+    </div>
+</div>
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="addRoomModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Create room</h4>
+            </div>
+            <div class="modal-body bg-inverse">
+
+                <span class="input input--newRoomModal">
+                    <input class="input__field input__field--newRoomModal" type="text" id="input-25" />
+                    <label class="input__label input__label--newRoomModal" for="input-25">
+                        <span class="input__label-content input__label-content--newRoomModal">Room Name</span>
+                    </label>
+                </span>
+                <span class="input input--newRoomModal">
+                    <input class="input__field input__field--newRoomModal" type="text" id="input-26" />
+                    <label class="input__label input__label--newRoomModal" for="input-26">
+                        <span class="input__label-content input__label-content--newRoomModal">Room Subject</span>
+                    </label>
+                </span>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary bg-danger" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary bg-success">Create Room</button>
+            </div>
+        </div>
+    </div>
+</div>
