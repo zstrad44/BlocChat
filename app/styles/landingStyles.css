@@ -1,0 +1,31 @@
+.rooms-list  li {
+	
+    width: 100%;
+    background-color: #f9f9f9;
+    transition: .1s ease-out;
+}
+.rooms-list  li:hover {
+    background-color: #545454;
+    color: #fff;
+    transition: .1s ease-in;
+}
+.rooms-list li:active {
+    background-color: #f9c33d;
+}
+
+.rooms-list li h5 {
+    color: 545454;
+}
+
+.add-room-Sidebar {
+    background-color: #428bca;
+    color: #fff;
+    font-size: 1.2em;
+    width: 100%;
+    transition: .3s ease;
+}
+.add-room-Sidebar:hover {
+    background-color: #4aafcd;
+    transition: .3s ease;
+    
+}

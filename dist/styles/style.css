@@ -10,14 +10,14 @@ html, body {
     font-size: 1.3em;
 }
 .navbar .navbar-brand:hover {
-    color: #
+    color: #428bca;
 }
 
 .navbar .navbar-toggler {
     float: left;
     color: #fff;
     font-size: 1.4em;
-}
+} 
 
 .navbar #exCollapsingNavbar {
     float: none; 
@@ -31,6 +31,36 @@ html, body {
     float: right;
     
 }
+
+.login-logout-btn-nav {
+    background-color: #5ab75c;
+    color: #fff;
+    border: 1px solid rgb(249,249,249, 0.05);
+    transition: .3s ease;
+}
+.login-logout-btn-nav:hover {
+    
+    transition: .3s ease;
+    background-color: #51a452;
+    color: #fff;
+    border: 1px solid rgb(249,249,249, 0.1);
+}
+.my-account-btn-nav {
+    background-color: #428bca;
+    color: #fff;
+    border: 1px solid rgb(249,249,249, 0.05);
+    transition: .3s ease;
+    
+}
+.my-account-btn-nav:hover{
+    
+    transition: .3s ease;
+    background-color: #4aafcd;
+    color: #fff;
+    border: 1px solid rgb(249,249,249, 0.1);
+    
+}
+
 
 .sidebar-Wrapper {
     
