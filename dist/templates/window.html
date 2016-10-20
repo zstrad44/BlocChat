@@ -1,0 +1,22 @@
+<form ng-submit="window.submit()">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="window.dismiss()" aria-label="cancel">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Create room</h4>
+    </div>
+    <div class="modal-body">
+        
+        <div class="md-form newRoom-input form-group">
+            <i id="tagicon" class="fa fa-tag prefix" aria-hidden="true"></i>
+            <input type="text" ng-model="window.text" name="text" class="form-control">
+            <label  data-error="hmm try another name" data-success="That'll do!">Type a room name</label>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary bg-danger" ng-click="window.dismiss()">Cancel</button>
+        <input type="submit" id="submit" value="Submit" class="btn btn-primary bg-success">
+    </div>
+</form>  
+
+

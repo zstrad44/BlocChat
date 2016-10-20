@@ -6,7 +6,7 @@
                     <div class="sidebar-header">
                         <h1 class="roomDisplay">Rooms</h1>
                     </div>
-                    <div class="sidebar-body"  >
+                    <div class="sidebar-body">
                         <ul class="list-group rooms-list">
                             <li type="" class="list-group-item" ng-repeat="rooms in landing.roomObject.all">
                                 <span class="tag tag-default tag-pill pull-xs-right">14</span>
@@ -14,7 +14,7 @@
                             </li>
                         </ul>
                         <br>
-                        <button type="button" class="btn add-room-Sidebar" data-toggle="modal" data-target=".bd-example-modal-sm">New room</button> 
+                        <button type="button" class="btn add-room-Sidebar" ng-click="landing.open()">New room</button> 
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
         </div>
     </div>
 </div>
-<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="addRoomModal">
+<!--<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="addRoomModal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -39,18 +39,11 @@
             </div>
             <div class="modal-body bg-inverse">
 
-                <span class="input input--newRoomModal">
-                    <input class="input__field input__field--newRoomModal" type="text" id="input-25" />
-                    <label class="input__label input__label--newRoomModal" for="input-25">
-                        <span class="input__label-content input__label-content--newRoomModal">Room Name</span>
-                    </label>
-                </span>
-                <span class="input input--newRoomModal">
-                    <input class="input__field input__field--newRoomModal" type="text" id="input-26" />
-                    <label class="input__label input__label--newRoomModal" for="input-26">
-                        <span class="input__label-content input__label-content--newRoomModal">Room Subject</span>
-                    </label>
-                </span>
+                <div class="md-form newRoom-input">
+                    <i id="tagicon" class="fa fa-tag prefix" aria-hidden="true"></i>
+                    <input type="text" id="form9" class="form-control validate">
+                    <label for="form9" data-error="hmm try another name" data-success="That'll do!">Type a room name</label>
+                </div>
 
             </div>
             <div class="modal-footer">
@@ -59,4 +52,4 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->

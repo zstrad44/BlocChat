@@ -18,6 +18,9 @@ html, body {
     color: #fff;
     font-size: 1.4em;
 } 
+.navbar .navbars-menu {
+	color: #fff;
+}
 
 .navbar #exCollapsingNavbar {
     float: none; 
@@ -39,7 +42,6 @@ html, body {
     transition: .3s ease;
 }
 .login-logout-btn-nav:hover {
-    
     transition: .3s ease;
     background-color: #51a452;
     color: #fff;
@@ -104,153 +106,26 @@ html, body {
     min-width: 300px; 
     height: auto;
 }
-.modal-body {
-    height: 250px;
-}
-
-
-
-/*Form styles*/
-
-.input {
-    position: relative;
-    z-index: 1;
-    display: inline-block;
-    margin: 1em;
-    margin-top: 1.5em;
-    width: calc(100% - 2em);
-    vertical-align: top;
-}
-
-.input__field {
-    position: relative;
-    display: block;
-    float: right;
-    padding: 0.8em;
-    width: 60%;
-    border: none;
-    border-radius: 0;
-    background: #f0f0f0;
-    color: #aaa;
+#addRoomModal .modal-title {
+    color:#428bca;
+    font-size: 1.5em;
     font-weight: 400;
-    -webkit-appearance: none; /* for box shadows to show on iOS */
+}
+.modal-body {
+    height: auto;
 }
 
-.input__field:focus {
-    outline: none;
+
+#addRoomModal i {
+    margin-top: 12px;
+    
+}
+#addRoomModal input {
+    color: #fff;
+    font-size: 1.1em;
+    letter-spacing: 2;
 }
 
-.input__label {
-    display: inline-block;
-    float: right;
-    padding: 0 1em;
-    width: 40%;
-    color: #696969;
-    font-weight: bold;
-    font-size: 90.25%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.input__label-content {
-    position: relative;
-    display: block;
-    padding: 1.6em 0;
-    width: 100%;
-}
-
-.graphic {
-    position: absolute;
-    top: 0;
-    left: 0;
-    fill: none;
-}
-
-.icon {
-    color: #ddd;
-    font-size: 150%;
-}
 
 /* newRoomModal */
-.input--newRoomModal {
-    margin-top: 1.7em;
-}
-
-.input__field--newRoomModal {
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    z-index: 100;
-    display: block;
-    padding: 0 0.55em;
-    width: calc(100% - 8px);
-    height: calc(100% - 8px);
-    background: #fff;
-    color: #7F8994;
-    opacity: 0;
-    -webkit-transform: scale3d(1, 0, 1);
-    transform: scale3d(1, 0, 1);
-    -webkit-transform-origin: 50% 100%;
-    transform-origin: 50% 100%;
-    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-    transition: opacity 0.3s, transform 0.3s;
-}
-
-.input__label--newRoomModal {
-    width: 100%;
-    text-align: left;
-    cursor: text;
-}
-
-.input__label--newRoomModal::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #e6e6e6;
-    -webkit-transform-origin: 50% 80%;
-    transform-origin: 50% 80%;
-    -webkit-transition: -webkit-transform 0.3s;
-    transition: transform 0.3s;
-}
-
-.input__label-content--newRoomModal {
-    -webkit-transform-origin: 10% 70%;
-    transform-origin: 10% 70%;
-    -webkit-transition: -webkit-transform 0.3s;
-    transition: transform 0.3s;
-}
-
-.input__field--newRoomModal:focus,
-.input--filled .input__field--newRoomModal {
-    opacity: 1;
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-}
-
-.input__field--newRoomModal:focus + .input__label--newRoomModal,
-.input--filled .input__label--newRoomModal {
-    cursor: default;
-    pointer-events: none;
-}
-
-.input__field--newRoomModal:focus + .input__label--newRoomModal::before,
-.input--filled .input__label--newRoomModal::before {
-    -webkit-transform: scale3d(1, 1.5, 1);
-    transform: scale3d(1, 1.5, 1);
-}
-
-.input__field--newRoomModal:focus + .input__label--newRoomModal .input__label-content--newRoomModal,
-.input--filled .input__label-content--newRoomModal {
-    -webkit-transform: translate3d(0, -3.15em, 0) scale3d(0.8, 0.8, 1);
-    transform: translate3d(0, -3.15em, 0) scale3d(0.8, 0.8, 1) translateZ(1px);
-}
 
