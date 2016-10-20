@@ -11,11 +11,6 @@
             url: '/',
             controller: 'LandingCtrl as landing',
             templateUrl: '/templates/landing.html'
-        })
-            .state('window', {
-            url: '/',
-            controller: 'OpenWindowCtrl as window',
-            templateUrl: '/templates/window.html'
         });
         
     } 

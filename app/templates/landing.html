@@ -8,9 +8,9 @@
                     </div>
                     <div class="sidebar-body">
                         <ul class="list-group rooms-list">
-                            <li type="" class="list-group-item" ng-repeat="rooms in landing.roomObject.all">
-                                <span class="tag tag-default tag-pill pull-xs-right">14</span>
-                                <h5 list-group-item-heading>{{ rooms.name }}</h5>
+                            <li type="" class="list-group-item" ng-repeat="room in landing.roomsList">
+                                <span class="tag tag-default tag-pill pull-xs-right">{{$index +1}}</span>
+                                <h5 list-group-item-heading>{{ room.name }}</h5>
                             </li>
                         </ul>
                         <br>
@@ -24,32 +24,6 @@
             <br>
             <br>
             <br>
-            <!--<p>Hello</p>-->
         </div>
     </div>
 </div>
-<!--<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="addRoomModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel">Create room</h4>
-            </div>
-            <div class="modal-body bg-inverse">
-
-                <div class="md-form newRoom-input">
-                    <i id="tagicon" class="fa fa-tag prefix" aria-hidden="true"></i>
-                    <input type="text" id="form9" class="form-control validate">
-                    <label for="form9" data-error="hmm try another name" data-success="That'll do!">Type a room name</label>
-                </div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary bg-danger" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary bg-success">Create Room</button>
-            </div>
-        </div>
-    </div>
-</div>-->

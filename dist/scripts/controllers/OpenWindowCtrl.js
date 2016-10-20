@@ -1,26 +1,20 @@
-
 (function() {
-    function OpenWindowCtrl(Room, $uibModalInstance) {
+    function OpenWindowCtrl(Rooms, $uibModalInstance, $scope) {
+        this.newRoomName;
 
-        this.roomService = Room;
-
-        this.dismiss = function() {
-            $uibModalInstance.dismiss('cancel');
-            
+        this.addRoom = function(){
+            Rooms.addRoom($scope.roomName);
+            $uibModalInstance.close();
         };
 
-        this.submit = function() {
-            if(this.text) {
-
-                this.roomService.addRoom(this.text);
-                this.text = '';
-                $uibModalInstance.close();
-            } 
-            
+        this.cancel = function () {
+            $uibModalInstance.dismiss();
         };
+
     }
+
 
     angular
         .module('blocChat')
-        .controller('OpenWindowCtrl', ['$uibModalInstance','Room', OpenWindowCtrl]);
+        .controller('OpenWindowCtrl', ['Rooms', '$uibModalInstance', '$scope', OpenWindowCtrl]);
 })();

@@ -1,22 +1,23 @@
+
 (function() {
-    function LandingCtrl(Room, $uibModal) {
-        
-       this.roomObject = Room;   
-    
-        this.open = function() {
-            $uibModal.open({
-                templateUrl: '/templates/window.html',
-                controller: 'OpenWindowCtrl as window'
+    function LandingCtrl($uibModal, Rooms, $firebaseArray) {
+        this.testData = "The controller is loading";
+
+        this.roomsList = Rooms.list();
+
+        this.open = function(size) {
+            var modalInst = $uibModal.open({
+                controller: 'OpenWindowCtrl as window',
+                templateUrl: '/templates/window.html'
             });
         };
 
-        this.dismiss = function() {
-            $uibModal.dismiss();
-        };
-    }    
+    }
 
     angular
         .module('blocChat')
-        .controller('LandingCtrl', ['Room', '$uibModal', LandingCtrl]); 
+        .controller('LandingCtrl', ['$uibModal', 'Rooms', '$firebaseArray', LandingCtrl]);
+})();
 
-})();   
+
+
