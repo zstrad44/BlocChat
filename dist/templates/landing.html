@@ -3,27 +3,83 @@
         <div class="sidebar-Wrapper">
             <div class="col-sm-3 sidebar">
                 <div class="sidebar-Content">
-                    <div class="sidebar-header">
-                        <h1 class="roomDisplay">Rooms</h1>
-                    </div>
                     <div class="sidebar-body">
+                        <div class="sidebar-header">
+                            <h1 class="roomDisplay p-l-1 elegant-text">Rooms</h1>
+                        </div>
                         <ul class="list-group rooms-list">
-                            <li type="" class="list-group-item" ng-repeat="room in landing.roomsList">
+                            <li type="" class="list-group-item" ng-repeat="room in landing.roomsList" ng-click="landing.rooms.selectRoom(room)">
                                 <span class="tag tag-default tag-pill pull-xs-right">{{$index +1}}</span>
                                 <h5 list-group-item-heading>{{ room.name }}</h5>
                             </li>
                         </ul>
-                        <br>
-                        <button type="button" class="btn add-room-Sidebar" ng-click="landing.open()">New room</button> 
+                        <br><div class="flex-center">
+                        <button type="button" class="btn add-room-Sidebar primary-color flex-center" ng-click="landing.open()">
+                            <i class="fa fa-plus" aria-hidden="true"></i>New room
+                        </button>
+                        </div> 
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="col-sm-9  mainArea">
-            <br>
-            <br>
-            <br>
+        <div class="col-sm-9  mainArea" ng-model="landing.room.active">
+            
+            <div class="row primary-color p-t-2 p-b-1 m-b-1 m-t-3">
+                    <div class="col-md-12">
+                        <div class="col-md-12 flex-center white-text"><h3>{{landing.rooms.currentRoom.name}}</h3></div>
+                    </div>
+                </div>
+            <!--Panel-->
+            <div class="card msg-blurb" ng-repeat="msg in landing.rooms.messages">
+                <!--<div class="card-header">
+                   
+                    <h4 class="white-text username-display pull-xs-left" ng-show="$even" ng-hide="$odd" >{{msg.username}}</h4>
+                    <h4 class="white-text username-display pull-xs-right" ng-show="$odd" ng-hide="$even" >{{msg.username}}</h4>
+               </div>-->
+                <div class="card-block">
+                    <div class="username-tag pull-xs-left" ng-show="$even" ng-hide="$odd"><h4 class="tag" >{{msg.username}}</h4></div>
+                    <div class="username-tag pull-xs-right" ng-show="$odd" ng-hide="$even" ><h4 class="tag" >{{msg.username}}</h4></div>
+                    <p class="card-text msg-content">{{msg.content}}</p>
+                </div>
+                <div class="card-footer">
+                    <h4 class="time-display" ng-show="$even" ng-hide="$odd"><span class="tag tag-default tag-pill pull-xs-right">{{msg.sentAt}}</span></h4>
+                    <h4 class="time-display" ng-show="$odd" ng-hide="$even"><span class="tag tag-default tag-pill pull-xs-left">{{msg.sentAt}}</span></h4>
+                </div>
+            </div>
+            <!--/.Panel-->
+            <div class="card unique-color message-entry-bar">
+                <div class="row">
+                        <form class="col-md-12">
+                            <div class="md-form form-group grey lighten-5 col-md-10 message-entry-input" >
+                                <textarea id="message-text-area" ng-model="charCounter" ng-trim="true" maxlength="200" class="md-textarea"></textarea>
+                                <label for="message-text-area">Type your message..</label>
+                                <span class="tag tag-default pull-xs-right"><p class="char-counter">{{200 - charCounter.length + " / 200"}}</p></span>      
+                            </div>
+                            <div class="md-form form-group col-md-2">
+                                <a href="" class="btn success-color">Send</a>
+                            </div>
+                        </form>
+                    
+                </div>
+            </div>
+            
+            
         </div>
     </div>
 </div>
+
+<!--NEED TO ADD THIS CHAR COUNTER FUNCTION TO $ROOTSCOPE, OR CONTROLLER FOR IT TO WORK-->
+<!--<script>
+    $(document).ready(function () {
+        var text_max = $('#message-text-area').attr('maxlength');
+        $('.char-counter').html(text_max + 'characters remaining');
+
+        $('#message-text-area').keyup(function() {
+
+            var text_length = $('#message-text-area').val().length;
+            var text_remaining = text_max - text_length;
+
+            $('.char-counter').html(text_remaining + "Chars");
+        });
+    });
+</script>-->

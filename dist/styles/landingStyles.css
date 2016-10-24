@@ -16,16 +16,137 @@
 .rooms-list li h5 {
     color: 545454;
 }
+.add-room-Sidebar i {
+	margin-right: 5px; 
+}
 
 .add-room-Sidebar {
-    background-color: #428bca;
     color: #fff;
-    font-size: 1.2em;
-    width: 100%;
+    font-size: 1.4em;
+    min-width: 70%;
+    width: auto;
+    height: 60px;
     transition: .3s ease;
 }
 .add-room-Sidebar:hover {
     background-color: #4aafcd;
     transition: .3s ease;
+}
+.msg-blurb {
+    min-width: 45%;
+    width: auto;
+    display: inline-block;
+}
+.msg-blurb .card-header {
+	padding: 4px 15px;
+}
+.msg-blurb .card-block {
+	padding: 10px 15px;
+}
+.msg-blurb:nth-child(odd) {
+    float: right;
+    margin-left: 10%
+}
+.msg-blurb:nth-child(even) {
+    margin-right: 10%;
+}
+.msg-blurb:nth-child(odd) .card-header {
+    background-color: #4B515D;
+    width: auto;
+    max-width: 40%;
+}
+.msg-blurb:nth-child(even) .card-header {
+    background-color: #424242;
+}
+/*.msg-blurb:nth-child(odd) .username-display {
+    float:right;
+}*/
+
+.username-tag .tag {
+	font-size: 1.2rem;
+    padding: 1rem;
+}
+.username-tag:nth-child(even) {
+    margin: -17px -20px 10px 15px;  
+}
+.username-tag:nth-child(odd) {
+    margin: -17px 15px 10px -20px;   
+}
+.username-tag:nth-child(odd) .tag {
+    background-color: #aa66cc;
+}
+.username-tag:nth-child(even) .tag {
+    background-color: #2BBBAD;
+}
+
+.msg-blurb:nth-child(even) .time-display .tag {
+    background-color:rgba(96, 125, 139, 0.2);
+    color: #546e7a;
+    font-size: 1rem;
+}
+.msg-blurb:nth-child(odd) .time-display .tag {
+    background-color:rgba(96, 125, 139, 0.2);
+    color: #546e7a;
+    font-size: 1rem;
+}
+.msg-blurb .card-footer {
+	background-color: transparent;
+    padding: 0;
+    border: none;
+    height: 1px;
+    margin-top: -15px;
+}
+
+.msg-blurb .msg-content {
+	font-size: 1.2rem;
+    padding: 5px;
+    word-wrap: normal;
+}
+
+.message-entry-bar {
+    width: 98%;
+    padding: 7px;
+    position: absolute;
+    bottom: 4px;
+    margin: 0px;
+    height: auto;
     
+}
+
+.message-entry-input {
+	border-radius: 5px;
+}
+.message-entry-input label {
+    padding: 5px;
+    margin-left: 4px;
+}
+.message-entry-input .tag {
+    width: auto;
+    height: 20px;
+    margin-bottom: 4px;
+}
+.message-entry-bar .btn  {
+min-width: 80%;
+    width:auto;
+    height: 50px;
+    font-size: 1.4em;
+}
+.message-entry-bar form  {
+    height: auto;
+    margin-bottom: -15px;
+    
+    
+}
+.message-text-area{
+    height: auto;
+    padding: 0px;
+}
+
+.message-entry-bar textarea.md-textarea {
+   padding: .5rem 0 0 0;
+    color: #3F729B;
+    font-size: 1.2rem;
+} 
+.message-entry-bar .md-form label.active {
+	transform:  translateY(-160%);
 }

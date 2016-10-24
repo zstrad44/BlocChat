@@ -18,3 +18,4 @@
         .module('blocChat')
         .controller('OpenWindowCtrl', ['Rooms', '$uibModalInstance', '$scope', OpenWindowCtrl]);
 })();
+ 
