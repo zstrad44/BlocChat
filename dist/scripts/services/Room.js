@@ -18,7 +18,7 @@
         Rooms.messages = [{username: "Zach", content: "Hey, what's up?"}, {username: "Jimmy", content: "Nothing really! Just chillin, Hbu?"}, {username: "Zach", content: "Same, you wanna go to the game tomorrow?"}, {username: "Jimmy", content: "For sure man! Sounds good, what time?"} ];
 
         Rooms.addRoom = function(roomName) {
-            Rooms.rooms.$add({name: roomName}); 
+            rooms.$add({name: roomName}); 
         };
 
         Rooms.selectRoom = function(room) {

@@ -1,7 +1,7 @@
 
 (function() {
-    function LandingCtrl(Messages, $uibModal, Rooms, $scope, $firebaseArray) {
-        
+    function LandingCtrl($cookies, Messages, $uibModal, Rooms, $scope, $firebaseArray) {
+        this.currentUser = $cookies.get('blocChatCurrentUser');
         this.rooms = Rooms;
         this.roomsList = Rooms.list();
         this.messages = Messages; // possible error
@@ -12,12 +12,13 @@
                 templateUrl: '/templates/window.html'
             });
         };
-
+        
+        
     }
 
     angular
         .module('blocChat')
-        .controller('LandingCtrl', ['Messages', '$uibModal', 'Rooms', '$scope', '$firebaseArray', LandingCtrl]);
+        .controller('LandingCtrl', ['$cookies', 'Messages', '$uibModal', 'Rooms', '$scope', '$firebaseArray', LandingCtrl]);
 })();
 
 

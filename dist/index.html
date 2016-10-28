@@ -17,32 +17,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-fixed-top navbar-light bg-inverse">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa fa-bars navbars-menu" aria-hidden="true"></i>
-        </button>
-        <a class="navbar-brand" href="#">Bloc Chat</a> 
-        <div class="collapse" id="exCollapsingNavbar">
-            <div class="bg-default p-a-1">  
-               <div class="row">
-                   <div class="col-sm-4">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-secondary btn-warning newRoom-Nav">New Room</button>
-                            <button type="button" class="btn btn-secondary btn-danger newUser-Nav">New Username</button>
-                        </div>
-                   </div>
-                   <div class="col-sm-4"></div>
-                   <div class="col-sm-4 right-admin-buttons">
-                       <div class="btn-group pull-right" role="group" aria-label="Basic example">
-                           <button type="button" class="btn btn-secondary btn-success login-logout-btn-nav ">Login / Logout</button>
-                           <button type="button" class="btn btn-secondary btn-primary my-account-btn-nav">My Account</button>
-                       </div>
-                   </div>
-                </div>
-            </div>
-        </div>
-        
-    </nav>
+    
 
     <ui-view> </ui-view>
     
@@ -55,6 +30,7 @@
     <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
     <!--Angular-ui-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-cookies.js"></script>
     <script>
         // Initialize Firebase
         var config = {
@@ -81,6 +57,10 @@
     <script src="/scripts/controllers/LandingCtrl.js"></script>
     <script src="/scripts/controllers/OpenWindowCtrl.js"></script>
     <script src="/scripts/services/Messages.js" ></script>
+    <script src="/scripts/controllers/UsernameWindowCtrl.js" ></script>
+    <script src="/scripts/services/BlocChatCookies.js" ></script>
+    
+    
    
 </body>
 
